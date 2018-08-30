@@ -21,6 +21,7 @@ class WebServer
 
     end
 
+    # Creates a socket client by accepting the new server connection.
     # Collects the incoming request from the client and puts each header
     # and line into an array.
     def collect_request()
@@ -33,7 +34,7 @@ class WebServer
         end
         
     # Parses the incoming request information and pulls out the User-Agent
-    # information. The creates a HTTP OK response with the 'Hello' message.
+    # information. Then creates a HTTP OK response with the 'Hello' message.
     def create_response()
         @request_lines.each do |line|
             words = line.split
@@ -50,7 +51,11 @@ class WebServer
 
     end
 
+    # Sends the response string back to the client and closes the socket
+    def write_response()
+        @socket.print @response
+        @socket.close
 
-
+    end
 
 end
