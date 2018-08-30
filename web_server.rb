@@ -21,6 +21,17 @@ class WebServer
 
     end
 
+    # Parses the incoming request from the client
+    def collect_request()
+        @socket = @server.accept
+        @request_lines = []
+        line = @socket.gets.strip
+        while line != ''
+            @request_lines << line
+            line = @socket.gets.strip
+        end
+        
+
 
 
 
