@@ -9,6 +9,18 @@ class WebServer
     end
 
 
+    # Continuously istens for incoming clients, handles the request, constructs 
+    # a response and sends the response.
+    def listen()
+        loop do
+            collect_request()
+            create_response()
+            write_response()
+            
+        end
+
+    end
+
 
 
 
