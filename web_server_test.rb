@@ -1,4 +1,4 @@
-require_relative './web_server'
+require_relative 'web_server'
 require 'minitest/autorun'
 
 
