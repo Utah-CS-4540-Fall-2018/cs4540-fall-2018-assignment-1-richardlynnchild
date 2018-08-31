@@ -2,6 +2,7 @@
 # Richard Child
 # uID: u0581030
 # Github: richardlynnchild
+# How many hours did it take to finish this assignment: 1.5
 
 # This is a simple server class that can be instantiated in other files.
 # It will open a socket on the localhost at a specified port. Then it can
