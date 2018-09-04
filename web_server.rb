@@ -49,7 +49,7 @@ class WebServer
     def create_response()
         agent = ''
         @request_lines.each do |line|
-            puts line
+            
             words = line.split
             if words[0] == "User-Agent:"
                 agent = words[1]
